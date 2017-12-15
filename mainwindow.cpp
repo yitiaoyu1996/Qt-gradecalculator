@@ -8,8 +8,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     this->setFixedSize(500,500);
-    //QObject::connect(ui->comboBox, SIGNAL(currentIndexChanged(QString)), ui->spinBox,SLOT(setValue(0)));
-    // QObject::connect(ui->comboBox, SIGNAL(currentIndexChanged(QString)), ui->horizontalSlider,SLOT(setValue(0)));
+
     QObject::connect(ui->spinBox, SIGNAL(valueChanged(int)), this,SLOT(update_overall(int)));
     QObject::connect(ui->spinBox_2, SIGNAL(valueChanged(int)), this,SLOT(update_overall(int)));
     QObject::connect(ui->spinBox_3, SIGNAL(valueChanged(int)), this,SLOT(update_overall(int)));
